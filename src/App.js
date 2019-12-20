@@ -36,7 +36,6 @@ function Table({ columns }) {
   const [data, setCurrentTableData] = React.useState([]);
   const [pageSize, setPageSize] = React.useState(3);
   const [pageCount, setPageCount] = React.useState(0);
-  // const [pageIndex, setPageIndex] = React.useState(0);
 
   React.useEffect(() => setQuery(Date.now()), []);
 
