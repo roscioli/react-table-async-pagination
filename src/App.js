@@ -73,7 +73,6 @@ function Table({ columns }) {
       const { listingRelations, totalNumResults } = result;
       setCurrentTableData(listingRelations);
       const pageCt = Math.ceil(totalNumResults / pageSize);
-      console.log("pageCt", pageCt);
       setPageCount(pageCt);
     });
   }, [pageIndex, pageSize, query]);
@@ -170,7 +169,7 @@ function Table({ columns }) {
             setPageSize(Number(e.target.value));
           }}
         >
-          {[10, 20, 30, 40, 50].map(pageSize => (
+          {[3, 5, 10].map(pageSize => (
             <option key={pageSize} value={pageSize}>
               Show {pageSize}
             </option>
